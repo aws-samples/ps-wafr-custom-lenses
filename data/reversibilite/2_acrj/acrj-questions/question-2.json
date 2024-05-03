@@ -1,0 +1,55 @@
+{
+    "id": "ACRJ2",
+    "title": "Comment evitez-vous que des modalites d'achat restreignent la reversibilite ?",
+    "description": "Les conditions commerciales liees aux licences et les differents engagements d'utilisation ne constituent pas d'obstacle a la mobilite du systeme d'information.",
+    "helpfulResource": {
+        "displayText": "L'organisation priorise le recours aux logiciels libres et aligne les engagements de consommation avec les cycles de mise en concurrence. Lorsque cela est possible, la rupture prematuree des engagements de consommation est encadree."
+    },
+    "riskRules": [{
+        "condition": "!ACRJCH3",
+        "risk": "HIGH_RISK"
+    }, {
+        "condition": "ACRJCH2 && ACRJCH3 && ACRJCH4",
+        "risk": "NO_RISK"
+    }, {
+        "condition": "default",
+        "risk": "MEDIUM_RISK"
+    }],
+    "choices": [{
+        "id": "ACRJCH1",
+        "title": "Des solutions et logiciels libres sont utilises en priorite.",
+        "helpfulResource": {
+            "displayText": "L'utilisation de logiciels libres permet un portage rapide vers une autre plateforme sans necessiter necessairement de mener une analyse des clauses commerciales et un cycle d'achat."
+        },
+        "improvementPlan": {
+            "displayText": "Effectuer une synchronisation avec le cadre technique en vigueur et realiser un audit des systemes d'information."
+        }
+    }, {
+        "id": "ACRJCH2",
+        "title": "Les licences logicielles choisies autorisent un deploiement sur d'autres plateformes.",
+        "helpfulResource": {
+            "displayText": "Les licences peuvent etre deployees sur l'ensemble des infrastructures de l'organisation."
+        },
+        "improvementPlan": {
+            "displayText": "Reviser les clauses contractuelles associees aux licences."
+        }
+    }, {
+        "id": "ACRJCH3",
+        "title": "Les engagements de consommation sont alignes avec les cycles d'achat.",
+        "helpfulResource": {
+            "displayText": "Les optimisations financieres possibles capitalisent souvent sur des engagements de consommation. Lorsque l'organisation souscrit a de tels engagements, elle veille a faire correspondre la temporalite de l'engagement avec la periodicite de son cycle de referencement."
+        },
+        "improvementPlan": {
+            "displayText": "Assurer que les engagements de consommation sont synchronises avec les cycles d'achat."
+        }
+    }, {
+        "id": "ACRJCH4",
+        "title": "Les engagements de consommation peuvent etre rompus en cas de reversibilite.",
+        "helpfulResource": {
+            "displayText": "La rupture precoce des engagements de consommation est encadree et n'entraine pas de penalites dissuasives. En tout cas, la rupture ou le non-respect des engagements de consommation ne doit pas etre de nature a bloquer l'exercice du plan de reversibilite."
+        },
+        "improvementPlan": {
+            "displayText": "Revoir les clauses contractuelles contenues dans les CCTP."
+        }
+    }]
+}

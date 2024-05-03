@@ -1,0 +1,58 @@
+{
+    "id": "IP1",
+    "title": "Qu'incluez-vous dans l'inventaire des configurations et des ressources pour permettre la reversibilite ?",
+    "description": "Un inventaire est tenu des ressources et configurations deployees, notamment en ce qui concerne les quotas et limites des plateformes cloud, afin d'anticiper le declenchement du plan de reversibilite.",
+    "helpfulResource": {
+        "displayText": "En particulier, les plateformes cloud offrent les memes niveaux de service en matiere de capacite de calcul, de segmentation et de securite des environnements, ainsi que de debit des connectivites. Une attention particuliere est portee sur la localisation geographique des infrastructures cibles."
+    },
+    "riskRules": [{
+        "condition": "!IP1CH1 || !IP1CH4",
+        "risk": "HIGH_RISK"
+    }, {
+        "condition": "IP1CH1 && IP1CH4 && IP1CH3",
+        "risk": "NO_RISK"
+    }, {
+        "condition": "default",
+        "risk": "MEDIUM_RISK"
+    }],
+    "choices": [{
+            "id": "IP1CH1",
+            "title": "Les structures de comptes et les controles associes.",
+            "helpfulResource": {
+                "displayText": "L'utilisation de structures multi-comptes est bien documentee, et la collecte des metriques operationnelles est egalement documentee. L'exercice du plan de reversibilite ne doit pas compromettre la securite ni les performances des applications."
+            },
+            "improvementPlan": {
+                "displayText": "Documenter les performances attendues en matiere de structure de comptes, notamment en ce qui concerne les reseaux, la securité et la capacite."
+            }
+        }, 
+        {
+            "id": "IP1CH2",
+            "title": "Les ressources et les configurations deployees.",
+            "helpfulResource": {
+                "displayText": "Un inventaire exhaustif de l'ensemble des ressources, configurations, et de leur taux d'utilisation est disponible."
+            },
+            "improvementPlan": {
+                "displayText": "Sur AWS, Activer AWS Config."
+            }
+        }, {
+            "id": "IP1CH3",
+            "title": "Les quantites et les limites des services necessaires.",
+            "helpfulResource": {
+                "displayText": "En cas d'exercice du plan de reversibilite, les quantites et les limites doivent permettre d'atteindre des niveaux de performance equivalents sur les plateformes cibles."
+            },
+            "improvementPlan": {
+                "displayText": "Verifier les limites et quotas des plateformes identifiees."
+            }
+        }, {
+            "id": "IP1CH4",
+            "title": "Les connectivites internes et externes necessaires au fonctionnement des applications et leur dimensionnement.",
+            "helpfulResource": {
+                "displayText": "En cas d'exercice du plan de reversibilite, il doit être possible de mettre en place ces connectivités pour permettre la mise en oeuvre du plan."
+            },
+            "improvementPlan": {
+                "displayText": "Verifier les limites et quotas des plateformes identifiees."
+            }
+        }
+
+    ]
+}

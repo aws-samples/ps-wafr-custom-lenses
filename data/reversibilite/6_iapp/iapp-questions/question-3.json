@@ -1,0 +1,57 @@
+{
+    "id": "IAPP3",
+    "title": "Comment integrez-vous la mobilite des donnees dans le developpement des applications ?",
+    "description": "Les bases de donnees et entrepots de donnees sont prepares pour permettre la mise en oeuvre du plan de reversibilite.",
+    "helpfulResource": {
+        "displayText": "Les donnees des applications peuvent retenir les applications, car elles peuvent etre plus difficiles a transferer. En anticipant les etapes de migration, les bascules necessaires peuvent etre realisees en peu de temps."
+    },
+    "riskRules": [{
+        "condition": "!IAPP3CH1 || !IAPP3CH4",
+        "risk": "HIGH_RISK"
+    }, {
+        "condition": "IAPP3CH1 && IAPP3CH4 && IAPP3CH2",
+        "risk": "NO_RISK"
+    }, {
+        "condition": "default",
+        "risk": "MEDIUM_RISK"
+    }],
+    "choices": [{
+            "id": "IAPP3CH1",
+            "title": "Les applications utilisent des bases de donnees standard du marche.",
+            "helpfulResource": {
+                "displayText": "Les differents moteurs et/ou solutions associes sont-ils disponibles sur l'ensemble des plateformes identifiees ? Les licences autorisent-elles le transfert des bases de donnees et entrepôts de donnees ?"
+            },
+            "improvementPlan": {
+                "displayText": "Utiliser des moteurs de traitement de donnees compatibles avec l'ensemble des plateformes identifiees."
+            }
+        }, {
+            "id": "IAPP3CH2",
+            "title": "Des instantanes des bases de donnees sont disponibles.",
+            "helpfulResource": {
+                "displayText": "La disponibilite de sauvegardes ou d'instantanes permet d'envisager rapidement le redemarrage de la couche de donnees sur une autre plateforme."
+            },
+            "improvementPlan": {
+                "displayText": "Prendre et exporter des instantanes compatibles avec l'ensemble des plateformes identifiees."
+            }
+        },
+        {
+            "id": "IAPP3CH3",
+            "title": "Une replication de donnees est mise en place.",
+            "helpfulResource": {
+                "displayText": "Les donnees sont repliquees et maintenues sur l'ensemble des plateformes identifiees."
+            },
+            "improvementPlan": {
+                "displayText": "Mettre en place les replications necessaires."
+            }
+        }, {
+            "id": "IAPP3CH4",
+            "title": "Un export et un import metier des donnees est possible.",
+            "helpfulResource": {
+                "displayText": "Il est possible d'exporter et de recuperer les donnees, en particulier pour les bases de données non standard."
+            },
+            "improvementPlan": {
+                "displayText": "Verifier que les donnees metier peuvent etre recuperees."
+            }
+        }
+    ]
+}

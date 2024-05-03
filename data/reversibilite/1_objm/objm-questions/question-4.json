@@ -1,0 +1,61 @@
+{
+    "id": "OBJM4",
+    "title": "Comment testez-vous la possibilite de mettre en oeuvre un plan de reversibilite ?",
+    "description": "Des tests verifient la portabilite des environnements ainsi que de la  mise en place des mesures techniques necessaires aux objectifs de la politique de reversibilite. La frequence et l'ampleur des tests sont d'autant plus importantes lorsque les objectifs de sortie sont rapides.",
+    "helpfulResource": {
+        "displayText": "En fonction des objectifs de redéploiement, de reprise ou de migration, les préparatifs permettent de projeter la pleine execution des plans de réversibilité. La réalisation d'un test permet de valider les modèles retenus. Plus les objectifs sont ambitieux, plus les préparatifs sont importants : ceux-ci vont de la simple mise à disposition de sauvegardes au doublement des chaines de développement et de déploiement applicatives."
+    },
+    "riskRules": [{
+            "condition": "!OBJMCH1",
+            "risk": "HIGH_RISK"
+        },
+        {
+            "condition": "OBJMCH1",
+            "risk": "NO_RISK"
+        }, {
+            "condition": "default",
+            "risk": "MEDIUM_RISK"
+        }
+    ],
+    "choices": [{
+            "id": "OBJMCH1",
+            "title": "Des etapes de preparation ont ete definies et testees.",
+            "helpfulResource": {
+                "displayText": "Les étapes préparatoires à la réalisation de tests conformes aux objectifs de portabilite ont été effectuées.\nExemples :\n1. La documentation est maintenue a jour pour l'ensemble des plateformes retenues.\n2. Des images de machines virtuelles sont disponibles et compatibles avec la plateforme de destination."
+            },
+            "improvementPlan": {
+                "displayText": "Effectuer les étapes préparatoires necessaires pour realiser des tests confirmant la possibilité d'effectuer la portabilité des environnements."
+            }
+        },
+        {
+            "id": "OBJMCH2",
+            "title": "Des tests d'importations sont realises.",
+            "helpfulResource": {
+                "displayText": "Il est possible d'importer des images de machines et des backups de données vers la plateforme de destination."
+            },
+            "improvementPlan": {
+                "displayText": "S'assurer que les images et les backups ont des formats compatibles avec les exigences de la plateforme de destination."
+            }
+        },
+        {
+            "id": "OBJMCH3",
+            "title": "Des tests de deploiement sont realises.",
+            "helpfulResource": {
+                "displayText": "Il est possible de lancer le déploiement des applications sur la plateforme de destination."
+            },
+            "improvementPlan": {
+                "displayText": "A partir des artefacts disponibles, lancez l'application sur la plateforme de destination. Mettez en place des automatisations de réplication et des pipelines de creation d'images multi-plateformes."
+            }
+        },
+        {
+            "id": "OBJMCH4",
+            "title": "Un deploiement simultane est en place.",
+            "helpfulResource": {
+                "displayText": "L'application est deployée simultanement sur l'ensemble des plateformes. Les tests viennent confirmer la possibilité de realiser une bascule totale de la charge."
+            },
+            "improvementPlan": {
+                "displayText": "Deployer les applications sur plusieurs plateformes simultanément et vérifier la capacite à monter en charge."
+            }
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "id": "ACRJ1",
+    "title": "Comment integrez-vous les objectifs de reversibilite dans vos processus d'acquisition ?",
+    "description": "L'ensemble des exigences reglementaires applicables aux solutions cloud est connu. L'organisation dispose de plusieurs solutions ayant fait l'objet d'une analyse de conformite. Lorsque des prestataires sont retenus, il est verifie que ces derniers sont en mesure d'assurer la mission avec les plateformes et technologies identifiees.",
+    "helpfulResource": {
+        "displayText": "La reversibilite d'une application se prepare des les processus d'achat et de referencement. Le referencement de plusieurs plateformes et fournisseurs de services permet aux equipes de prevoir la portabilite des applications sous reserve que celles-ci présentent les memes conditions commerciales."
+    },
+    "riskRules": [{
+            "condition": "!ACRJCH1",
+            "risk": "HIGH_RISK"
+        },
+        {
+            "condition": "ACRJCH1 && ACRJCH2 && ACRJCH3",
+            "risk": "NO_RISK"
+        }, {
+            "condition": "default",
+            "risk": "MEDIUM_RISK"
+        }
+    ],
+    "choices": [{
+        "id": "ACRJCH1",
+        "title": "Les exigences contractuelles des procedures d'achat integrent les objectifs de reversibilite.",
+        "helpfulResource": {
+            "displayText": "Les procédures d'achat intègrent les objectifs de réversibilité au moyen d'un ensemble de clauses d'exigences standardisées."
+        },
+        "improvementPlan": {
+            "displayText": "Elaborer ou mettre à jour le modèle de clauses contractuelles."
+        }
+    }, {
+        "id": "ACRJCH2",
+        "title": "Les cibles pour l'application d'une reversibilite sont identifiees des le processus d'acquisition.",
+        "helpfulResource": {
+            "displayText": "Une analyse des differentes solutions et produits met en evidence plusieurs references conformes pouvant faire l'objet d'une utilisation."
+        },
+        "improvementPlan": {
+            "displayText": "Identifier dès les procédures d'achat les cibles des potentielles futures réversbilité."
+        }
+    }, {
+        "id": "ACRJCH3",
+        "title": "Les couts, les delais et les vehicules d'achat necessaires a une reversibilite sont inclus des le processus d'acquisition.",
+        "helpfulResource": {
+            "displayText": "Les differents vehicules d'achat referencent-ils les produits, solutions et plateformes compatibles avec les exigences de l'organisation ?"
+        },
+        "improvementPlan": {
+            "displayText": "Referencer l'ensemble des solutions, produits et partenaires nécessaires à une réversbilité."
+        }
+    }, {
+        "id": "ACRJCH4",
+        "title": "Les fournisseurs uniques (non reversibles) font l'objet d'une revue reguliere.",
+        "helpfulResource": {
+            "displayText": "Lorsqu'une reference est unique, celle-ci fait l'objet d'une justification et d'un suivi periodique."
+        },
+        "improvementPlan": {
+            "displayText": "Le CCoE passe regulierement en revue les fournisseurs uniques ainsi que les justifications associees."
+        }
+    }]
+}

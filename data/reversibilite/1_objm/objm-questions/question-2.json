@@ -1,0 +1,46 @@
+{
+    "id": "OBJM2",
+    "title": "Quels types de metriques utilisez-vous pour evaluer un plan de reversibilite ?",
+    "description": "Au-dela des indicateurs permettant d'etablir le niveau de preparation de l'organisation et de ses moyens, les produits, ressources et services font l'objet d'une mesure basee sur la nature des solutions, de l'architecture et des methodes retenues.\nExemples :\n1. 3 jours pour la creation des fondations.\n2. 2 jours pour le deploiement des configurations reseaux.\n3. 2 heures pour le portage d'une machine virtuelle.\n4.15 minutes pour un conteneur",
+    "helpfulResource": {
+        "displayText": "Deux dimensions doivent être prises en compte : le délai et le coût necessaire à l'exercice de la réversibilité. Il est conseillé de baser les calculs sur un scenario standardisé prenant en compte les préparations eventuelles. Afin d'obtenir un bon modèle, il est conseillé de concentrer les efforts sur les éléments dimensionnants du systeme d'information et sur les étapes critiques du plan de réversibilité.\nExemples :\nLa migration d'un cluster kubernetes pourra être decomposée selon :\n1. Migration du cluster\n2. Migration des conteneurs\nEn l'absence de préparation et de présence d'un cluster de destination, l'étape de migration du cluster devra impliquer le provisionnement d'un nouvel environnement chez un fournisseur de services cloud, ce qui entrainera des délais. La migration des conteneurs pourra se faire en parallèle une fois que les clusters sont provisionnés en tenant compte cependant de l'adhérence entre applications."
+    },
+    "riskRules": [{
+        "condition": "OBJMCH1 && OBJMCH2",
+        "risk": "NO_RISK"
+    }, {
+        "condition": "default",
+        "risk": "MEDIUM_RISK"
+    }],
+    "choices": [{
+            "id": "OBJMCH1",
+            "title": "Des metriques permettent l'evaluation du delai d'une reversibilite",
+            "helpfulResource": {
+                "displayText": "En se basant sur le plan de réversibilité et sur les procédures de migration, il est important de prendre en compte les temps de mise à disposition des ressources lorsque la plateforme de destination ne possède pas de modèle de provisionnement des ressources à la demande ou l'élasticité necessaire pour accueillir directement le système d'information.\nExemples :\n- La creation des fondations requiert 3 jours.\n- La creation de l'infrastructure réseau requiert 3 jours.\n- La migration d'une machine virtuelle requiert 2 heures.\n- La migration d'une base de données requiert 1 heure."
+            },
+            "improvementPlan": {
+                "displayText": "Etablir un modele permettant la définition des métriques, puis s'assurer que les métriques permettent une estimation du temps de migration en se basant sur un parcours de migration standardisé."
+            }
+        },
+        {
+            "id": "OBJMCH2",
+            "title": "Des metriques permettent l'evaluation du cout d'une reversibilite.",
+            "helpfulResource": {
+                "displayText": "Il est important de considérer le recours à des prestataires extérieurs et l'activation des prestations et clauses prévues au titre de la réversibilité."
+            },
+            "improvementPlan": {
+                "displayText": "Etablir un modèle pour la définition des métriques, puis s'assurer que les métriques permettent une estimation des coûts de migration en se basant sur un parcours de migration standardisé."
+            }
+        },
+        {
+            "id": "OBJMCH3",
+            "title": "Des metriques permettent l'evaluation du risque d'une reversibilite.",
+            "helpfulResource": {
+                "displayText": "Il est important de considérer des métriques permettant d'évaluer la complexité et le risque d'une réversbilité. Ces métriques peuvent être basées par exemple sur le nombre et la complexité des applications, le nombre de dépendances de chaque application, la durée d'indisponibilité maximale lors d'une réversiblité."
+            },
+            "improvementPlan": {
+                "displayText": "Etablir un modèle pour la définition des métriques, puis s'assurer que les métriques permettent une estimation des risques de migration en se basant sur un parcours de migration standardisé."
+            }
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "id": "CCT2",
+    "title": "Comment documentez-vous les applications pour assurer leur reversibilite ?",
+    "description": "Chaque application dispose d'une documentation technique permettant la reprise de l'exploitation ou la preparation d'un portage.",
+    "helpfulResource": {
+        "displayText": "La documentation des contraintes et des choix techniques facilite la reprise de l'exploitation d'un système d'information et la preparation des etapes de migration. En particulier, les informations de dimensionnement et les modeles de ressources sont detailles."
+    },
+    "riskRules": [{
+            "condition": "!CCT2CH1 || !CCT2CH1 || !CCT2CH3",
+            "risk": "HIGH_RISK"
+        },
+        {
+            "condition": "!CCT2CH1",
+            "risk": "NO_RISK"
+        }, {
+            "condition": "default",
+            "risk": "MEDIUM_RISK"
+        }
+    ],
+    "choices": [{
+        "id": "CCT2CH1",
+        "title": "Les decisions d'architecture et leurs impacts sont consignes et historises.",
+        "helpfulResource": {
+            "displayText": "Les décisions d'architecture non documentées peuvent constituer un frein important à la réversibilité."
+        },
+        "improvementPlan": {
+            "displayText": "Tracer les décisions d'architecture."
+        }
+    }, {
+        "id": "CCT2CH2",
+        "title": "L'architecture des applications est documentee et regulierement revue.",
+        "helpfulResource": {
+            "displayText": "Chaque application fait l'objet d'une documentation d'architecture technique permettant entre autre de faciliter sa réversbilité"
+        },
+        "improvementPlan": {
+            "displayText": "Etablir et maintenir la documentation d'architecture des applications."
+        }
+    }, {
+        "id": "CCT2CH3",
+        "title": "Le deploiement des applications est documentee et regulierement revu.",
+        "helpfulResource": {
+            "displayText": "Chaque application fait l'objet d'une documentation de son déploiement permettant entre autre de faciliter sa réversbilité"
+        },
+        "improvementPlan": {
+            "displayText": "Etablir et maintenir la documentation de déploiement des applications."
+        }
+    }]
+}

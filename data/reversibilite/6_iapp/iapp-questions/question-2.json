@@ -1,0 +1,57 @@
+{
+    "id": "IAPP2",
+    "title": "Comment vous assurez-vous que les deploiements anticipent la portabilite des applications ?",
+    "description": "Un inventaire est tenu des ressources et configurations deployees. En particulier, les quotas et limites des plateformes cloud sont ajustes en prevision du declenchement du plan de reversibilite.",
+    "helpfulResource": {
+        "displayText": "En particulier, les plateformes cloud offrent le meme niveau de service en matiere de capacite de calcul, de segmentation, de securite des environnements et de debit des connectivites."
+    },
+    "riskRules": [{
+        "condition": "!IAPP2CH2 || !IAPP2CH3",
+        "risk": "HIGH_RISK"
+    }, {
+        "condition": "IAPP2CH2 && IAPP2CH3",
+        "risk": "NO_RISK"
+    }, {
+        "condition": "default",
+        "risk": "MEDIUM_RISK"
+    }],
+    "choices": [{
+            "id": "IAPP2CH1",
+            "title": "Les ressources et dependances necessaires au deploiement des applications sont identifiees.",
+            "helpfulResource": {
+                "displayText": "Les ressources provisionnees dans le cadre du deploiement des applications sont identifiables, que ce soit par des conventions de nommage ou par l'application de tags."
+            },
+            "improvementPlan": {
+                "displayText": "Identifier les ressources qui font partie de la meme application."
+            }
+        }, {
+            "id": "IAPP2CH2",
+            "title": "Le deploiement des applications est defini en tant que code et automatise.",
+            "helpfulResource": {
+                "displayText": "Le deploiement d'une application sur une plateforme cloud s'appuie sur un outil d'infrastructure-as-code."
+            },
+            "improvementPlan": {
+                "displayText": "Prevoir le provisionnement des applications en utilisant des stacks dediees."
+            }
+        }, 
+        {
+            "id": "IAPP2CH3",
+            "title": "Le deploiement de l'infrastructure necessaire aux applications est defini en tant que code et automatise.",
+            "helpfulResource": {
+                "displayText": "Le deploiement de l'infrastructure nécessaire aux applications s'appuie sur un outil d'infrastructure-as-code."
+            },
+            "improvementPlan": {
+                "displayText": "Revoir les guides de configuration et de deploiement pour l'organisation."
+            }
+        }, {
+            "id": "IAPP2CH4",
+            "title": "Les images necessaires au deploiement sont maintenues et disponibles.",
+            "helpfulResource": {
+                "displayText": "Les machines virtuelles, conteneurs et fonctions sont disponibles dans un repertoire unique. En particulier les artefacts sont compatible avec l'ensemble des plateformes identifiees."
+            },
+            "improvementPlan": {
+                "displayText": "Adapter les chaines de build pour creer des images compatibles avec l'ensemble des plateformes identifiees"
+            }
+        }
+    ]
+}

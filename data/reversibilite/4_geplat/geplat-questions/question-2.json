@@ -1,0 +1,48 @@
+{
+    "id": "GEPLAT2",
+    "title": "Comment gerez la formation des personnels en vue de permettre l'application d'un plan de reversbilite ?",
+    "description": "Les personnels responsables des environnements deployes sur les plateformes cloud possedent les competences necessaires pour atteindre les objectifs de l'organisation.",
+    "helpfulResource": {
+        "displayText": "Pour assurer le bon fonctionnement des systemes d'information dans des conditions satisfaisantes, les membres du personnel et les equipes possedent des formations et des certifications en adequation avec les objectifs de l'organisation."
+    },
+    "riskRules": [{
+            "condition": "!GEPLAT2CH1 || !GEPLAT2CH3",
+            "risk": "HIGH_RISK"
+        },
+        {
+            "condition": "GEPLAT2CH1 && GEPLAT2CH3",
+            "risk": "NO_RISK"
+        }, {
+            "condition": "default",
+            "risk": "MEDIUM_RISK"
+        }
+    ],
+    "choices": [{
+        "id": "GEPLAT2CH1",
+        "title": "Les equipes possedent des certifications professionnelles pour les plateformes ciblees.",
+        "helpfulResource": {
+            "displayText": "Par exemple : sur AWS, les certifications suivantes sont recommandees : Solution Architect Professional et Security Specialty."
+        },
+        "improvementPlan": {
+            "displayText": "Prevoir l'inventaire des certifications et competences des equipes."
+        }
+    }, {
+        "id": "GEPLAT2CH2",
+        "title": "Un plan de certification, de qualification et de maintien en competence est disponible.",
+        "helpfulResource": {
+            "displayText": "Le maintien des compétences par les personnels de l'organisation est une priorité identifiée ?"
+        },
+        "improvementPlan": {
+            "displayText": "Mettre en place un plan d'obtention et de maintien des certifications."
+        }
+    }, {
+        "id": "GEPLAT2CH3",
+        "title": "Les competences necessaires des partenaires ont ete requises.",
+        "helpfulResource": {
+            "displayText": "L'organisation a reference un vivier de partenaires lui permettant de disposer de prestations sur l'ensemble des plateformes cibles."
+        },
+        "improvementPlan": {
+            "displayText": "Vérifier la competence des partenaires par rapport aux objectifs de reversibilite."
+        }
+    }]
+}

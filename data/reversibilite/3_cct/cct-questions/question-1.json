@@ -1,0 +1,57 @@
+{
+    "id": "CCT1",
+    "title": "Comment assurez-vous la coherence technique du systeme d'information vis a vis des objectifs de reversibilite ?",
+    "description": "Le CCoE (Cloud Center of Excellence), en concentrant les expertises et la vue d'ensemble de l'usage des plateformes, pilote, arbitre et rend compte des decisions et choix d'architecture.",
+    "helpfulResource": {
+        "displayText": "L'utilisation des plateformes cloud et de leurs services doit se faire avec une vue centree sur la valeur apportee par les services utilises. Un cadre technique precisant des guides et des matrices de choix est edite pour l'organisation."
+    },
+    "riskRules": [{
+            "condition": "!CCT1CH1 || !CCT1CH2 || !CCT1CH3 || !CCT1CH4",
+            "risk": "HIGH_RISK"
+        },
+        {
+            "condition": "CCT1CH4 && CCT1CH3 && CCT1CH1",
+            "risk": "NO_RISK"
+        }, {
+            "condition": "default",
+            "risk": "MEDIUM_RISK"
+        }
+    ],
+    "choices": [{
+        "id": "CCT1CH1",
+        "title": "Le CCoE est en charge d'assurer et de vallider cette coherence.",
+        "helpfulResource": {
+            "displayText": "Les architectures et produits font l'objet d'une validation ou de révision par le CCoE. Une recurrence est etablie permettant de passer en revue les applications et leurs dependances."
+        },
+        "improvementPlan": {
+            "displayText": "Etablir une comitologie pour le pilotage des usages des plateformes cloud."
+        }
+    }, {
+        "id": "CCT1CH2",
+        "title": "Un cadre definit les options techniques (services, produits, plateformes, etc.) pour la portabilite.",
+        "helpfulResource": {
+            "displayText": "Des cadres techniques precisant les conditions d'emploi des differents services disponibles sont-ils disponibles."
+        },
+        "improvementPlan": {
+            "displayText": "Etablir le cadre technique pour la réversibilité et la portabilité."
+        }
+    }, {
+        "id": "CCT1CH3",
+        "title": "Les choix techniques font l'objet d'une validation.",
+        "helpfulResource": {
+            "displayText": "Les architectures et les choix technologiques sont validés avant la mise en production d'un systeme d'information"
+        },
+        "improvementPlan": {
+            "displayText": "Revoir l'architecture et valider les déploiements."
+        }
+    }, {
+        "id": "CCT1CH4",
+        "title": "Un processus permet de traiter les non-conformites et les exceptions.",
+        "helpfulResource": {
+            "displayText": "Les conditions d'octroi d'exceptions sont formalisees. Les exceptions font l'objet d'un suivi regulier"
+        },
+        "improvementPlan": {
+            "displayText": "Etablir le cadre d'octroi d'exceptions."
+        }
+    }]
+}

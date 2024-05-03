@@ -1,0 +1,48 @@
+{
+    "id": "GEPLAT1",
+    "title": "Comment incluez-vous les outils et procedures permettant de gerer les operations de la plateforme dans la reversibilite ?",
+    "description": "Les outils et les procedures d'administration du systeme d'information doivent pouvoir s'adapter aux nouvelles plateformes en cas de reversiblite.",
+    "helpfulResource": {
+        "displayText": "L'exploitation des plateformes et solutions cloud repose sur un outillage centralise qui permet l'administration des environnements déployes. Une attention particuliere est accordee à l'homogeneite des fonctionnalites et à la compatibilite des logiciels et des offres souscrites."
+    },
+    "riskRules": [{
+            "condition": "!GEPLAT1CH1 || !GEPLAT1CH2",
+            "risk": "HIGH_RISK"
+        },
+        {
+            "condition": "GEPLAT1CH1 && GEPLAT1CH2",
+            "risk": "NO_RISK"
+        }, {
+            "condition": "default",
+            "risk": "MEDIUM_RISK"
+        }
+    ],
+    "choices": [{
+        "id": "GEPLAT1CH1",
+        "title": "Les outils d'administration sont centralises et leur utilisation dans le cadre d'une reversbilite etudie.",
+        "helpfulResource": {
+            "displayText": "Les outils d'administration des systemes d'information ont ete centralises pour faciliter l'application d'une reversbilite."
+        },
+        "improvementPlan": {
+            "displayText": "Revoir les outils associes à l'administration des plateformes."
+        }
+    }, {
+        "id": "GEPLAT1CH2",
+        "title": "Les procedures d'administration sont systematiquement identifiees.",
+        "helpfulResource": {
+            "displayText": "Apres les outils, les procedures d'administration et de gestion du changement sont identifiées et prévues pour permettre l'application de la politique de réversibilité. Il est recommandé de prendre en compte les procedures d'escalade et de réponse aux incidents."
+        },
+        "improvementPlan": {
+            "displayText": "Mettre a disposition les procédures encadrant les actions d'administration pour toutes les plateformes cloud."
+        }
+    }, {
+        "id": "GEPLAT1CH3",
+        "title": "Les activites et les inventaires permettent d'identifier clairement les plateformes.",
+        "helpfulResource": {
+            "displayText": "Afin de faciliter l'aiguillage et la collecte de metriques, tous les objets produits dans le cadre des operations des systemes d'information identifient clairement les plateformes cibles. Une attention particuliere est accordee aux inventaires et aux outils de gestion des tickets."
+        },
+        "improvementPlan": {
+            "displayText": "Reexaminer le modèle lie à la creation de tickets et a la collecte de donnees sur le systeme d'information."
+        }
+    }]
+}

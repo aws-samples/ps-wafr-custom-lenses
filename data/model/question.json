@@ -1,0 +1,48 @@
+{
+    "id":"",
+    "title":"",
+    "description":"",
+    "helpfulResource":{
+        "displayText":"Lorem Ipsum",
+        "url":""
+    },
+    "riskRules":[       {
+        "condition": "default",
+        "risk": "NO_RISK"
+      },{
+        "condition":"id_1 && id_2 && id_3",
+        "risk":"NO_RISK | MEDIUM_RISK | HIGH_RISK"
+    }],
+    "choices":[
+        {
+            "id":"",
+            "title":"",
+            "helpfulResource":{
+                "displayText":"Lorem Ipsum",
+                "url":""
+            },
+            "improvementPlan":{
+                "displayText":"Lorem Ipsum",
+                "url":""
+            },
+            "additionalResources":[
+                {
+                    "type":"",
+                    "content":[{
+                        "displayText":"HELPFUL_RESOURCE",
+                        "url":""
+                    }]
+                },
+                {
+                    "type":"IMPROVEMENT_PLAN",
+                    "content":[
+                        {
+                            "displayText":"IMPROVEMENT_PLAN",
+                            "url":""
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

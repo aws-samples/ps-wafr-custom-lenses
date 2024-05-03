@@ -1,0 +1,61 @@
+{
+    "id": "OBJM3",
+    "title": "Comment mesurez-vous la conformite de votre systeme d'information par rapport a vos objectifs de reversibilite ?",
+    "description": "Les indicateurs cles permettant de verifier le bon niveau de preparation de l'entite sont collectes et maintenus a jour.",
+    "helpfulResource": {
+        "displayText": "Les applications et les déploiements remontent régulièrement les metriques permettant d'établir leur conformité aux objectifs définis. L'état du parc applicatif est connu et fait l'objet de revues regulières. Lorsque des seuils sont atteints et dépassés, les responsables sont notifiés."
+    },
+    "riskRules": [{
+            "condition": "!OBJMCH4",
+            "risk": "HIGH_RISK"
+        },
+        {
+            "condition": "OBJMCH1 && OBJMCH3 && OBJMCH4",
+            "risk": "NO_RISK"
+        }, {
+            "condition": "default",
+            "risk": "MEDIUM_RISK"
+        }
+    ],
+    "choices": [{
+            "id": "OBJMCH1",
+            "title": "Des indicateurs cles sont regulierement mis a jour.",
+            "helpfulResource": {
+                "displayText": "Les différents indicateurs sont régulierement mis a jour.\nExemples :\nLe nombre de personnels disposant de certifications techniques permettant d'opérer le systeme d'information sur les plateformes privilégiées."
+            },
+            "improvementPlan": {
+                "displayText": "Etablir le reporting systématique des métriques pour le pilotage et créer les tableaux de bord."
+            }
+        },
+        {
+            "id": "OBJMCH2",
+            "title": "Les metriques techniques sont collectees automatiquement.",
+            "helpfulResource": {
+                "displayText": "La collecte et la publication des métriques techniques sont automatisées."
+            },
+            "improvementPlan": {
+                "displayText": "Apres avoir défini un premier modèle d'exercice de la réversibilité, établir la collecte des métriques en se basant sur l'ensemble des ressources deployées.\nExemples :\nLes 10 instances du systeme d'information 'A' portent toutes un tag permettant leur identification. L'organisation estime que chaque instance prend 4 heures a migrer. Le systeme d'information reporte une estimation du temps nécessaire à la migration de 40 heures."
+            }
+        },
+        {
+            "id": "OBJMCH3",
+            "title": "Un suivi des non-conformites est en place.",
+            "helpfulResource": {
+                "displayText": "Les non-conformités font l'objet d'une mise en évidence."
+            },
+            "improvementPlan": {
+                "displayText": "Tracer dans un bulletin périodique les non-conformités détectées par les procédures de collecte des métriques."
+            }
+        },
+        {
+            "id": "OBJMCH4",
+            "title": "Un tableau de bord de la reversbilite est regulierement publie.",
+            "helpfulResource": {
+                "displayText": "Des tableaux de bord sont disponibles pour suivre les objectifs en matière de réversibilité."
+            },
+            "improvementPlan": {
+                "displayText": "Elaborer les tableaux de bord liés à la réversibilité de l'organisation."
+            }
+        }
+    ]
+}

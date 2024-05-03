@@ -1,0 +1,55 @@
+{
+    "id": "MEO1",
+    "title": "Comment etablissez-vous les processus permettant la mise en oeuvre d'un plan de reversiblite ?",
+    "description": "Les processus permettant l'exercice de la reversibilite et la mobilite des systemes sont etablis, valides et connus des equipes.",
+    "helpfulResource": {
+        "displayText": "Apres avoir defini les objectifs, les metriques, les cadres techniques et reglementaires, il s'agit desormais de cadrer la mise en oeuvre du plan de reversibilite, de verifier la preparation des equipes et de s'assurer de l'atteinte des objectifs."
+    },
+    "riskRules": [{
+        "condition": "!MEO1CH1 || !MEO1CH2",
+        "risk": "HIGH_RISK"
+    }, {
+        "condition": "MEO1CH1 && MEO1CH2",
+        "risk": "NO_RISK"
+    }, {
+        "condition": "default",
+        "risk": "MEDIUM_RISK"
+    }],
+    "choices": [{
+        "id": "MEO1CH1",
+        "title": "Les applications disposent de runbooks permettant leur migration.",
+        "helpfulResource": {
+            "displayText": "Un runbook est un document precisant les etapes necessaires pour la realisation d'un objectif. Dans la mesure du possible, les scripts et commandes devant etre executes sont precises pour les phases de preparation, de migration et de validation."
+        },
+        "improvementPlan": {
+            "displayText": "Etablir les runbooks pour les applications."
+        }
+    },{
+        "id": "MEO1CH2",
+        "title": "Les runbooks identifient les mesures de securite a respecter.",
+        "helpfulResource": {
+            "displayText": "Protocoles de communication, gestion des identites, connaissance et gestion des secrets, mise en place du chiffrement."
+        },
+        "improvementPlan": {
+            "displayText": "Revoir les mesures de securite precisees par les runbooks."
+        }
+    }, {
+        "id": "MEO1CH3",
+        "title": "Les runbook sont testes regulierement.",
+        "helpfulResource": {
+            "displayText": "Afin de valider la justesse des runbooks, ceux-ci sont testes regulierement."
+        },
+        "improvementPlan": {
+            "displayText": "Prevoir la revue periodique des runbooks de reprise et de migration."
+        }
+    }, {
+        "id": "MEO1CH4",
+        "title": "Les procedures de cloture et de supression sont definies.",
+        "helpfulResource": {
+            "displayText": "Une fois les infrastructures et les applications migrees, la cloture definitive de la relation avec le fournisseur de services marque la fin du processus de reversibilite."
+        },
+        "improvementPlan": {
+            "displayText": "Identifier les mecanismes permettant la suppression des donnees et la cloture des comptes et services."
+        }
+    }]
+}

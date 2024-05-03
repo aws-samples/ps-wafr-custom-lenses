@@ -1,0 +1,48 @@
+{
+    "id": "IP2",
+    "title": "Comment gerez vous les identites et les controles d'acces afin de faciliter la reversibilite ?",
+    "description": "Un annuaire central, prenant en charge les protocoles de federation necessaires, est utilise pour gerer les identites et leurs cycles de vie.",
+    "helpfulResource": {
+        "displayText": "Une fois la gestion des identites operee depuis un outil central, l'utilisation de techniques et de protocoles de federation permet de connecter facilement l'organisation a une plateforme cloud."
+    },
+    "riskRules": [{
+        "condition": "!IP2CH1",
+        "risk": "HIGH_RISK"
+    }, {
+        "condition": "IP2CH1 && IP2CH2",
+        "risk": "NO_RISK"
+    }, {
+        "condition": "default",
+        "risk": "MEDIUM_RISK"
+    }],
+    "choices": [{
+            "id": "IP2CH1",
+            "title": "Les identites et controles d'acces sont centralises.",
+            "helpfulResource": {
+                "displayText": "Si les controles d'acces ne peuvent pas etre directement integres depuis la plateforme de gestion des identites, celles-ci sont regroupees dans des groupes et associees à des tags ou attributs permettant de transferer le modele de provisionnement des permissions."
+            },
+            "improvementPlan": {
+                "displayText": "Mettre a jour l'annuaire pour les personnels et les roles ayant besoin d'acceder aux plateformes cloud."
+            }
+        },
+        {
+            "id": "IP2CH2",
+            "title": "Un annuaire central implemente le modele de controle d'acces retenu.",
+            "helpfulResource": {
+                "displayText": "Les fondations du modele de controle d'acces et d'octroi des permissions (RBAC/ABAC) sont mises en œuvre depuis l'annuaire central sous la forme de groupes ou d'attributs."
+            },
+            "improvementPlan": {
+                "displayText": "Consolider le modele de contrôle d'accès à partir de l'annuaire central."
+            }
+        }, {
+            "id": "IP2CH3",
+            "title": "Une federation d'identite est mise en place pour l'acces aux plateformes.",
+            "helpfulResource": {
+                "displayText": "Des federations d'identite permettent de s'authentifier sur l'ensemble des plateformes identifiees."
+            },
+            "improvementPlan": {
+                "displayText": "Mettre en place les federations d'identites manquantes."
+            }
+        }
+    ]
+}

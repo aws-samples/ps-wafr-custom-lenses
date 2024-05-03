@@ -1,0 +1,55 @@
+{
+    "id": "MEO2",
+    "title": "Comment preparez vous les equipes a la mise en oeuvre de la reversbilite ?",
+    "description": "L'exercice du plan de reversibilite implique une charge de travail pour les equipes. Cette charge est identifiee, et sa compatibilite avec la saisonnalite de l'activite est connue.",
+    "helpfulResource": {
+        "displayText": "L'impact de l'exercice du plan de reversibilite sur le plan de charge des equipes et les besoins en termes de competences sont identifies."
+    },
+    "riskRules": [{
+        "condition": "!MEO2CH3 || !MEO2CH4",
+        "risk": "HIGH_RISK"
+    }, {
+        "condition": "MEO2CH1 && MEO2CH3 && MEO2CH4",
+        "risk": "NO_RISK"
+    }, {
+        "condition": "default",
+        "risk": "MEDIUM_RISK"
+    }],
+    "choices": [{
+        "id": "MEO2CH1",
+        "title": "La charge de l'exercice du plan de reversibilite est etablie.",
+        "helpfulResource": {
+            "displayText": "Une estimation du nombre de jours necessaires à l'exercice du plan de reversibilite est disponible."
+        },
+        "improvementPlan": {
+            "displayText": "Consulter les equipes afin d'obtenir une estimation de la charge de travail."
+        }
+    }, {
+        "id": "MEO2CH2",
+        "title": "La montee en competence des equipes est prevue et anticipee.",
+        "helpfulResource": {
+            "displayText": "L'eventuelle montee en competence des equipes en prevision d'un changement de plateforme, d'outil et de mode operatoire fait l'objet d'un plan. Les prestations de renfort sont identifiees."
+        },
+        "improvementPlan": {
+            "displayText": "Identifier les mecanismes permettant la montee en competence des equipes responsables des operations (certifications, gameDay, ateliers, presentations)."
+        }
+    }, {
+        "id": "MEO2CH3",
+        "title": "La chronologie de la mise en oeuvre du plan de reversibilite est etablie.",
+        "helpfulResource": {
+            "displayText": "Les etapes necessaires a la mise en oeuvre du plan de reversibilite sont connues, et leur chronologie est etablie."
+        },
+        "improvementPlan": {
+            "displayText": "Etablir le plan projet."
+        }
+    }, {
+        "id": "MEO2CH4",
+        "title": "Les responsabilites des equipes sont etablies.",
+        "helpfulResource": {
+            "displayText": "Les responsabilités au sein des équipes et entre les équipes sont définies."
+        },
+        "improvementPlan": {
+            "displayText": "Etablir les responsabilités et les périmètres des équipes lors de la mise en oeuvre d'une réversibilité."
+        }
+    }]
+}

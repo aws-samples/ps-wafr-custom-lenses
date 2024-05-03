@@ -1,0 +1,48 @@
+{
+    "id": "IAPP1",
+    "title": "Comment integrez-vous la portabilite dans le developpement des applications ?",
+    "description": "La portabilite des applications est envisagee des les phases de conception et de developpement, en accordant une attention particuliere a la gestion des dependances.",
+    "helpfulResource": {
+        "displayText": "En plus de la mise en œuvre des bonnes pratiques identifiees dans le chapitre 3, les developpements abstraient la logique metier des ressources cloud en utilisant des patterns d'architecture logicielle."
+    },
+    "riskRules": [{
+        "condition": "!IAPP1CH1",
+        "risk": "HIGH_RISK"
+    }, {
+        "condition": "IAPP1CH1 && IAPP1CH2 && IAPP1CH3",
+        "risk": "NO_RISK"
+    }, {
+        "condition": "default",
+        "risk": "MEDIUM_RISK"
+    }],
+    "choices": [{
+            "id": "IAPP1CH1",
+            "title": "Le packaging des applications prend en compte la portabilite (par exemple : utilisation de conteneurs).",
+            "helpfulResource": {
+                "displayText": "Les codes responsables de la logique metier sont encapsules lors des phases de build, que ce soit lors de la creation d'images de machines, de conteneurs ou de fonctions."
+            },
+            "improvementPlan": {
+                "displayText": "Decoupler la logique metier de la ressource responsable de l'execution."
+            }
+        }, {
+            "id": "IAPP1CH2",
+            "title": "La gestion des parametres et des secrets est independante des applications.",
+            "helpfulResource": {
+                "displayText": "La gestion des secrets et des parametres est configurable. Les references aux secrets et parametres sont dynamiques, et des fichiers de configurations sont maintenus pour les plateformes identifiees."
+            },
+            "improvementPlan": {
+                "displayText": "Prevoir l'injection ou le referencement dynamique des parametres specifiques a chaque plateforme."
+            }
+        },
+        {
+            "id": "IAPP1CH3",
+            "title": "Les connexions entre applications sont abstraites (par exemple : API).",
+            "helpfulResource": {
+                "displayText": "Le referencement des dependances et l'etablissement des connexions a des services tiers font l'objet de modules dedies."
+            },
+            "improvementPlan": {
+                "displayText": "Rediger des modules permettant l'abstraction des dependances et des connexions."
+            }
+        }
+    ]
+}

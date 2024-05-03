@@ -1,0 +1,49 @@
+{
+    "id": "IP3",
+    "title": "Comment gerez-vous votre plateforme ?",
+    "description": "En permettant un provisionnement rapide de configurations et d'infrastructures sur differentes plateformes, l'utilisation des techniques d'infrastructure-as-code facilite considerablement la possibilite de re-deployer les environnements rapidement en cas de besoin.",
+    "helpfulResource": {
+        "displayText": "Les outils d'infrastructure-as-code sont compatibles avec les differentes plateformes identifiees, et les sources associees permettent de maintenir le provisionnement des environnements sur l'ensemble des plateformes cloud. Le niveau de preparation des sources est en accord avec les objectifs de reversibilite."
+    },
+    "riskRules": [{
+        "condition": "!IP3CH1",
+        "risk": "HIGH_RISK"
+    }, {
+        "condition": "IP3CH2",
+        "risk": "NO_RISK"
+    }, {
+        "condition": "default",
+        "risk": "MEDIUM_RISK"
+    }],
+    "choices": [{
+            "id": "IP3CH1",
+            "title": "Le provisionnement des infrastructures utilise des outils d'infrastructure-as-code.",
+            "helpfulResource": {
+                "displayText": "L'utilisation de AWS CloudFormation, Terraform, AWS CDK, Pulumi ou equivalent est recommandee."
+            },
+            "improvementPlan": {
+                "displayText": "Mettre en place le provisionnement de la plateforme cloud sous forme d'infrastructure-as-code."
+            }
+        },
+        {
+            "id": "IP3CH2",
+            "title": "Les deploiements et les retours arrieres sont automatises.",
+            "helpfulResource": {
+                "displayText": "L'outil d'infrastructure-as-code retenu prend en charge les differentes plateformes cloud identifiees."
+            },
+            "improvementPlan": {
+                "displayText": "Porter les sources disponibles vers un outil compatible avec les plateformes retenues."
+            }
+        },
+        {
+            "id": "IP3CH3",
+            "title": "Les modifications manuelles apportees aux infrastructures sont integrees dans les codes source",
+            "helpfulResource": {
+                "displayText": "Aucune modification manuelle n'a ete effectuee sur les infrastructures cloud, de maniere a maintenir la synchronisation entre les sources et les ressources deployees."
+            },
+            "improvementPlan": {
+                "displayText": "Corriger les divergences d'infrastructure (drifts) pour retablir la synchronisation entre les sources et les déploiements."
+            }
+        }
+    ]
+}
