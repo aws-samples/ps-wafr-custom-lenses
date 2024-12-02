@@ -19,7 +19,7 @@
     ],
     "choices": [{
         "id": "CCT1CH1",
-        "title": "Le CCoE est en charge d'assurer et de vallider cette coherence.",
+        "title": "Le CCoE est en charge d'assurer et de valider cette coherence.",
         "helpfulResource": {
             "displayText": "Les architectures et produits font l'objet d'une validation ou de révision par le CCoE. Une recurrence est etablie permettant de passer en revue les applications et leurs dependances."
         },

@@ -19,9 +19,9 @@
     ],
     "choices": [{
         "id": "GEPLAT1CH1",
-        "title": "Les outils d'administration sont centralises et leur utilisation dans le cadre d'une reversbilite etudie.",
+        "title": "Les outils d'administration sont centralises et leur utilisation dans le cadre d'une reversibilite etudie.",
         "helpfulResource": {
-            "displayText": "Les outils d'administration des systemes d'information ont ete centralises pour faciliter l'application d'une reversbilite."
+            "displayText": "Les outils d'administration des systemes d'information ont ete centralises pour faciliter l'application d'une reversibilite."
         },
         "improvementPlan": {
             "displayText": "Revoir les outils associes à l'administration des plateformes."

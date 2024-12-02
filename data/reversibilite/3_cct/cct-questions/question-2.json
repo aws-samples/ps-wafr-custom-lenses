@@ -30,7 +30,7 @@
         "id": "CCT2CH2",
         "title": "L'architecture des applications est documentee et regulierement revue.",
         "helpfulResource": {
-            "displayText": "Chaque application fait l'objet d'une documentation d'architecture technique permettant entre autre de faciliter sa réversbilité"
+            "displayText": "Chaque application fait l'objet d'une documentation d'architecture technique permettant entre autre de faciliter sa réversibilité"
         },
         "improvementPlan": {
             "displayText": "Etablir et maintenir la documentation d'architecture des applications."
@@ -39,7 +39,7 @@
         "id": "CCT2CH3",
         "title": "Le deploiement des applications est documentee et regulierement revu.",
         "helpfulResource": {
-            "displayText": "Chaque application fait l'objet d'une documentation de son déploiement permettant entre autre de faciliter sa réversbilité"
+            "displayText": "Chaque application fait l'objet d'une documentation de son déploiement permettant entre autre de faciliter sa réversibilité"
         },
         "improvementPlan": {
             "displayText": "Etablir et maintenir la documentation de déploiement des applications."
