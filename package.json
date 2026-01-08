@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@aws-sdk/client-wellarchitected": "^3.385.0",
+    "@aws-sdk/client-wellarchitected": "^3.965.0",
     "minimist": "^1.2.8",
     "chalk":"^4.1.0"
   }
